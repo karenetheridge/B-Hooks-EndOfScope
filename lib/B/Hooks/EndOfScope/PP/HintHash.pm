@@ -9,6 +9,8 @@ use strict;
 use warnings;
 use Scalar::Util ();
 
+our $VERSION = '0.14';
+
 # This is the original implementation, which sadly is broken
 # on perl 5.10+ within string evals
 sub on_scope_end (&) {

@@ -4,6 +4,8 @@ package B::Hooks::EndOfScope::XS;
 use strict;
 use warnings;
 
+our $VERSION = '0.14';
+
 BEGIN {
   require Module::Runtime;
   # Adjust the Makefile.PL if changing this minimum version

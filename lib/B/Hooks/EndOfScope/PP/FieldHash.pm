@@ -7,6 +7,8 @@ package # hide from pause
 use strict;
 use warnings;
 
+our $VERSION = '0.14';
+
 use warnings;
 use strict;
 
