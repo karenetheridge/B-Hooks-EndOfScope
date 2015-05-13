@@ -1,4 +1,4 @@
-Revision history for {{$dist->name}}
+Revision history for B-Hooks-EndOfScope
 
 {{$NEXT}}
   - updated the tooling for generating Makefile.PL
