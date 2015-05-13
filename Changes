@@ -2,6 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
   - updated the tooling for generating Makefile.PL
+  - removed Tie::StdHash from prereqs, which is not require()able as a module
+    on its own (despite being indexed) (mniyagawa, GH #3)
 
 0.14      2015-01-31 23:59:03Z
   - line numbers in shipped code are now the same as the repository source,
