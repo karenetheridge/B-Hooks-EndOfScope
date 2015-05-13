@@ -25,7 +25,7 @@ fieldhash my %hh;
 {
   package # hide from pause too
     B::Hooks::EndOfScope::PP::_TieHintHashFieldHash;
-  use base 'Tie::StdHash';
+  use base 'Tie::StdHash';  # in Tie::Hash, in core
   sub DELETE {
     my $ret = shift->SUPER::DELETE(@_);
     B::Hooks::EndOfScope::PP::__invoke_callback($_) for @$ret;
