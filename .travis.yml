@@ -28,8 +28,12 @@ perl:
   - "5.12-thr"
   - "5.10"
   - "5.10-thr"
-  - "5.8"
-  - "5.8-thr"
+matrix:
+  include:
+    - perl: "5.8"
+      env: AUTHOR_TESTING=0
+    - perl: "5.8-thr"
+      env: AUTHOR_TESTING=0
 env:
   global:
     - AUTHOR_TESTING=1
