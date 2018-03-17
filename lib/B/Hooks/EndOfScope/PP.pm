@@ -6,12 +6,14 @@ use strict;
 
 our $VERSION = '0.23';
 
+use constant _PERL_VERSION => "$]";
+
 BEGIN {
-  if ("$]" =~ /^5\.009/) {
+  if( _PERL_VERSION =~ /^5\.009/ ) {
     # CBA to figure out where %^H got broken and which H::U::HH is sane enough
     die "By design B::Hooks::EndOfScope does not operate in pure-perl mode on perl 5.9.X\n"
   }
-  elsif ("$]" < '5.010') {
+  elsif( _PERL_VERSION < 5.010 ) {
     require B::Hooks::EndOfScope::PP::HintHash;
     *on_scope_end = \&B::Hooks::EndOfScope::PP::HintHash::on_scope_end;
   }
